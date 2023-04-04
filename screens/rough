@@ -1,0 +1,58 @@
+
+// import React, { useState } from 'react';
+// import { View, TextInput, Button, Alert ,StyleSheet} from 'react-native';
+// import axios from 'axios';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
+// import 
+
+// export default function LoginScreen({navigation}) {
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+
+//   const handleLogin = async () => {
+//     const data = {
+//       email,
+//       password,
+//     };
+//     try {
+//       const response = await axios.post('http://127.0.0.1:5500/data.js', data);
+//       const user = response.data;
+//       if (user) {
+//         await AsyncStorage.setItem('email', email);
+//         navigation.navigate('Welcome');
+//       } else {
+//         Alert.alert('Invalid email or password');
+//       }
+//     } catch (error) {
+//       console.error(error);
+//       // Handle the error or show an error message to the user
+//     }
+//   };
+
+//   return (
+//     <View>
+//       <TextInput
+//         style={styles.textInput}
+//         placeholder="Email"
+//         onChangeText={text => setEmail(text)}
+//         value={email}
+//       />
+//       <TextInput
+//         style={styles.textInput}
+//         placeholder="Password"
+//         onChangeText={text => setPassword(text)}
+//         value={password}
+//         secureTextEntry={true}
+//       />
+//       <Button title="Login" onPress={handleLogin} />
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   textInput: {
+//     borderWidth: 1,
+//     margin: 4,
+//     padding: 5,
+//   }
+// });
